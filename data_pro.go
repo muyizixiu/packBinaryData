@@ -58,4 +58,6 @@ func unpack(data []byte) ([]byte, int16, error) {
 			return nil, 0, errors.New("flags are not right!")
 		}
 	}
+	var cmd int16
+	cmd = int16(data[4])*256 + int16(data[5])
 }
